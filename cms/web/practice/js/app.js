@@ -134,8 +134,7 @@ angular.module('pws', [
       })
       .state('taskdesc', {
         url: '/taskdesc',
-        templateUrl: 'views/taskdesc.html',
-        controller: 'DescCtrl'
+        templateUrl: 'views/taskdesc.html'
       })
       .state('tests', {
         url: '/tests',
@@ -146,7 +145,17 @@ angular.module('pws', [
         url: '/test/{testName}',
         templateUrl: 'views/testpage.html',
         controller: 'TestpageCtrl'
+      })
+      .state('video_pas', {
+        url: '/resources/pascal',
+        templateUrl: 'views/resources.pascal.html',
+        controller: 'VideoPas'
       });
+      /*.state('video_cpp', {
+        url: '/resources/cpp',
+        templateUrl: 'views/resources.pascal.html',
+        controller: 'VideoCpp'
+      })*/
   })
   .controller('HomepageCtrl', function(navbarManager) {
     navbarManager.setActiveTab(0);
